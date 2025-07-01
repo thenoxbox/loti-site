@@ -1,0 +1,1023 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020202;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* For Firefox */
+/* You can't completely hide the scrollbar in Firefox with pure CSS, */
+/* but you can make it very thin and less obtrusive. */
+/* See the next example for a better approach for Firefox. */
+.jmbotron {
+  display: flex;
+  flex-direction: row;
+  height: 98vh;
+  padding: 84px 112px;
+  flex-direction: row-reverse;
+  margin-bottom: 76px;
+}
+@media (max-width: 767px) {
+  .jmbotron {
+    flex-direction: column;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 140px 30px;
+    margin-bottom: 0px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .jmbotron {
+    height: 45vh;
+    padding: 84px 70px;
+  }
+}
+
+.jmbodisps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 767px) {
+  .jmbodisps {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.jmbodisps p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: right;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .jmbodisps p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.jmbodisps h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 88px;
+  text-align: right;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .jmbodisps h1 {
+    font-size: 44px;
+    text-align: center;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .jmbodisps h1 {
+    font-size: 92px;
+  }
+}
+.jmbodisps a {
+  background: rgba(2, 2, 2, 0);
+  border: 4px solid #4EACEE;
+  text-decoration: none;
+  border-radius: 40px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  color: #4EACEE;
+  padding: 12px 18px;
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(0);
+  transition: color 0.15s ease-in-out, box-shadow 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7), transform 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7), border 0.15s ease;
+}
+@media (max-width: 767px) {
+  .jmbodisps a {
+    color: white;
+    border: 4px solid white;
+    font-size: 16px;
+  }
+}
+.jmbodisps a:hover {
+  color: #ffffff;
+  box-shadow: 2px 4px 0px #ffffff;
+  border: 4px solid #ffffff;
+  transform: translateY(-1px);
+}
+@media (768px <= width <= 1024px) {
+  .jmbodisps a {
+    color: white;
+    border: 4px solid white;
+  }
+}
+
+.mrtitle h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .mrtitle h1 {
+    font-size: 30px;
+    padding-top: 140px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .mrtitle h1 {
+    font-size: 35px;
+  }
+}
+
+.maxmusic {
+  margin: 0px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+@media (max-width: 767px) {
+  .maxmusic {
+    margin: 40px 28px;
+  }
+}
+
+.maxflex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .maxflex {
+    flex-direction: column;
+  }
+}
+
+.mkbd {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .mkbd {
+    width: 100%;
+  }
+}
+
+.mksplash {
+  height: 548px;
+}
+@media (max-width: 767px) {
+  .mksplash {
+    height: 390px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .mksplash {
+    height: 290px;
+  }
+}
+@media (width: 540px) {
+  .mksplash {
+    height: 460px;
+  }
+}
+
+.mkdeets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mkdeets h2 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 27px;
+  text-align: left;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .mkdeets h2 {
+    font-size: 18px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .mkdeets h2 {
+    font-size: 18px;
+  }
+}
+.mkdeets a {
+  color: white;
+  background: #4EACEE;
+  text-decoration: none;
+  border: 2px solid #4EACEE;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  transition: color 0.15s ease-in-out, border 0.15s ease-in-out, background 0.15s ease-in-out;
+}
+@media (max-width: 767px) {
+  .mkdeets a {
+    padding: 5px;
+    border-radius: 0px;
+    font-size: 15px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .mkdeets a {
+    padding: 5px;
+    border-radius: 0px;
+    font-size: 15px;
+  }
+}
+.mkdeets a:hover {
+  background: none;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.abtparent {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin: 114px 28px;
+}
+@media (max-width: 767px) {
+  .abtparent {
+    margin: 90px 28px;
+  }
+}
+
+.abtwittle {
+  display: flex;
+  flex-direction: row;
+}
+.abtwittle h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .abtwittle h1 {
+    font-size: 30px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .abtwittle h1 {
+    font-size: 35px;
+  }
+}
+
+.abtkontent {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+@media (max-width: 767px) {
+  .abtkontent {
+    gap: 40px;
+  }
+}
+
+.abtsplashtwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .abtsplashtwo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.abtsplash {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .abtsplash {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.wimage {
+  height: 394px;
+  width: 40%;
+  border: 2px solid #4EACEE;
+}
+@media (max-width: 767px) {
+  .wimage {
+    width: auto;
+    height: 390px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .wimage {
+    height: 268px;
+  }
+}
+
+.abkontent-l {
+  width: 54%;
+}
+@media (max-width: 767px) {
+  .abkontent-l {
+    width: auto;
+  }
+}
+.abkontent-l p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: right;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .abkontent-l p {
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .abkontent-l p {
+    font-size: 18px;
+  }
+}
+
+.abkontent-r {
+  width: 54%;
+}
+@media (max-width: 767px) {
+  .abkontent-r {
+    width: auto;
+  }
+}
+.abkontent-r p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: left;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .abkontent-r p {
+    font-size: 18px;
+    letter-spacing: -0.03em;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .abkontent-r p {
+    font-size: 18px;
+  }
+}
+
+.newsec {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 28px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .newsec {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin: 35px 28px;
+  }
+}
+
+.headnlinks {
+  width: 40%;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .headnlinks {
+    width: auto;
+    gap: 20px;
+  }
+}
+.headnlinks h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 98%;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .headnlinks h1 {
+    font-size: 40px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .headnlinks h1 {
+    font-size: 40px;
+  }
+}
+
+.winkers {
+  width: 48.7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .winkers {
+    width: 75%;
+  }
+}
+.winkers a {
+  font-size: 22.5px;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  transition: color 0.15s ease-in-out;
+}
+@media (max-width: 767px) {
+  .winkers a {
+    color: #4EACEE;
+  }
+}
+.winkers a:hover {
+  color: #4EACEE;
+}
+
+input[type=radio] {
+  accent-color: white;
+  background: #020202;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.8549019608);
+}
+
+.safety {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+.safety p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .safety p {
+    font-size: 16px;
+  }
+}
+
+.forms {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .forms {
+    width: auto;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .forms {
+    width: 52%;
+  }
+}
+
+.subsend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.subsend input {
+  height: 60px;
+  background: #020202;
+  border: 2px solid #ffffff;
+  padding: 0 22px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  border-radius: 0px;
+  color: #ffffff;
+  width: 80%;
+}
+.subsend input:focus {
+  border: 2px solid #ffffff;
+  border-radius: 0px;
+}
+@media (max-width: 767px) {
+  .subsend input {
+    font-size: 16px;
+  }
+}
+.subsend button {
+  width: 20%;
+  height: 60px;
+  border: 2px solid #ffffff;
+  background: #fff;
+  color: #020202;
+  font-size: 30px;
+}
+
+.submission-feedback {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.submission-feedback p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 55px;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.manhan {
+  margin: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.haman h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .haman h1 {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .haman h1 {
+    font-size: 35px;
+  }
+}
+
+.hamanposts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.bigmanblast {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0px;
+}
+@media (max-width: 767px) {
+  .bigmanblast {
+    width: 100%;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .bigmanblast {
+    width: 100%;
+  }
+}
+
+.blastoise {
+  height: 380px;
+  border-radius: 10px;
+}
+
+.lilblast {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.lilblast h2 {
+  font-family: "Plus Jakarta Sans";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 98%;
+  letter-spacing: -0.03em;
+  color: white;
+}
+@media (max-width: 767px) {
+  .lilblast h2 {
+    font-size: 20px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .lilblast h2 {
+    font-size: 20px;
+  }
+}
+.lilblast p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: white;
+}
+@media (max-width: 767px) {
+  .lilblast p {
+    font-size: 14px;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .lilblast p {
+    font-size: 14px;
+  }
+}
+.lilblast a {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  color: #ffffff;
+  border: none;
+  transition: color 0.15s ease-in-out;
+}
+@media (max-width: 767px) {
+  .lilblast a {
+    color: #4EACEE;
+  }
+}
+.lilblast a:hover {
+  color: #4EACEE;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.bkrenji {
+  margin-top: 3px;
+  padding: 10px;
+  background: #1E1E1E;
+  border-radius: 30px;
+}
+
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    width: 100vw;
+    padding-top: 90px;
+    background-color: #1E1E1E;
+    transition: 0.4s;
+  }
+}
+@media (width: 540px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    width: 100vw;
+    padding-top: 90px;
+    background-color: #1E1E1E;
+    transition: 0.4s;
+  }
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.holster {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.angles {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 64px 0px 64px;
+  gap: 60px;
+}
+.angles button {
+  font-family: "Plus Jakarta Sans";
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  border: 0;
+  padding: none;
+  background: none;
+  transition: color 0.15s ease;
+}
+.angles button:focus {
+  color: #4EACEE;
+}
+
+.qwik {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 26px;
+}
+.qwik a {
+  font-size: 24px;
+  background: none;
+  text-decoration: none;
+  color: #4EACEE;
+  border: none;
+  transition: color 0.15s ease-in-out;
+}
+
+.nav {
+  display: flex;
+  font-family: "Plus Jakarta Sans";
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  padding: 12px 18px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 120;
+}
+@media (max-width: 767px) {
+  .nav {
+    backdrop-filter: none;
+    padding: 25px 18px;
+  }
+}
+.nav a {
+  text-decoration: none;
+}
+.nav .stacked {
+  display: none;
+  z-index: 999;
+}
+@media (max-width: 767px) {
+  .nav .stacked {
+    display: block;
+  }
+}
+@media (width: 540px) {
+  .nav .stacked {
+    display: block;
+  }
+}
+.nav .hamburger {
+  display: block;
+  width: 42px;
+  cursor: pointer;
+  height: 42px;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 99;
+}
+.nav .bar, .nav .hamburger::after, .nav .hamburger::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 99;
+}
+.nav .bar {
+  width: 100%;
+  z-index: 99;
+}
+.nav .hamburger::before {
+  width: 100%;
+  z-index: 99;
+}
+.nav .hamburger.is-active::before {
+  width: 100%;
+  transform: rotate(-45deg) translate(-8px, 6px);
+  z-index: 99;
+}
+.nav .hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -8px);
+  z-index: 99;
+}
+.nav .hamburger.is-active .bar {
+  opacity: 0;
+  z-index: 99;
+}
+.nav .splat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: end;
+}
+.nav .spread-menu {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+.nav .spread-menu button {
+  border: none;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: #ffffff;
+  transition: color 0.15s ease-in-out;
+  background: none;
+}
+.nav .spread-menu button:hover {
+  color: #4EACEE;
+}
+@media (max-width: 767px) {
+  .nav .spread-menu {
+    display: none;
+  }
+}
+.nav .lebuttan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav .lebuttan a {
+  font-size: 22.5px;
+  background: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  transition: color 0.15s ease-in-out;
+}
+.nav .lebuttan a:hover {
+  color: #4EACEE;
+}
+@media (max-width: 767px) {
+  .nav .lebuttan {
+    display: none;
+  }
+}
+.nav h2 {
+  font-family: "Dancing Script", cursive;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 55px;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  text-shadow: none;
+  transition: text-shadow 0.35s ease-in-out;
+}
+.nav h2:hover {
+  cursor: default;
+}
+@media (max-width: 767px) {
+  .nav h2 {
+    padding-top: 5.5px;
+    display: block;
+    z-index: 99;
+  }
+}
+.nav:hover h2 {
+  text-shadow: #ffffff 4px 4px 10px;
+}
+
+.footsies {
+  margin: 80px 28px 20px 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footsies a {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .footsies a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .footsies {
+    flex-wrap: wrap;
+  }
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  .video-bg {
+    height: 100%;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .video-bg {
+    height: 50%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}/*# sourceMappingURL=index.css.map */
