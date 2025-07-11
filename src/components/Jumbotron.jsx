@@ -33,8 +33,8 @@ const Jumbotron = () => {
         <p>Latest release</p>
         <h1>Okirika .ft Taves</h1>
         <a
-          href="https://loti.lnk.to/AheadAhead"
-          aria-label="listen to Ahead Ahead now"
+          href="https://loti.lnk.to/GorimapaGangstaVolIILotstar"
+          aria-label="listen to Okirika on GG volume 2 now"
           title="Listen Now"
           target="_blank"
           rel="noopener noreferrer"
