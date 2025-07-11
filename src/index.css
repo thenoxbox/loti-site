@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
@@ -77,9 +78,9 @@ body {
   }
 }
 .jmbodisps h1 {
-  font-family: "Plus Jakarta Sans";
+  font-family: "Bodoni Moda", serif;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 88px;
   text-align: right;
   letter-spacing: -0.03em;
@@ -98,7 +99,7 @@ body {
 }
 .jmbodisps a {
   background: rgba(2, 2, 2, 0);
-  border: 4px solid #4EACEE;
+  border: 4px solid #33658A;
   text-decoration: none;
   border-radius: 40px;
   font-family: "Plus Jakarta Sans";
@@ -106,7 +107,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: -0.03em;
-  color: #4EACEE;
+  color: #33658A;
   padding: 12px 18px;
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(0);
@@ -236,9 +237,9 @@ body {
 }
 .mkdeets a {
   color: white;
-  background: #4EACEE;
+  background: #33658A;
   text-decoration: none;
-  border: 2px solid #4EACEE;
+  border: 2px solid #33658A;
   border-radius: 20px;
   padding: 8px 20px;
   font-size: 16px;
@@ -349,7 +350,7 @@ body {
 .wimage {
   height: 394px;
   width: 40%;
-  border: 2px solid #4EACEE;
+  border: 2px solid #33658A;
 }
 @media (max-width: 767px) {
   .wimage {
@@ -491,11 +492,11 @@ body {
 }
 @media (max-width: 767px) {
   .winkers a {
-    color: #4EACEE;
+    color: #33658A;
   }
 }
 .winkers a:hover {
-  color: #4EACEE;
+  color: #33658A;
 }
 
 input[type=radio] {
@@ -603,6 +604,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 30px;
 }
 
 .haman h1 {
@@ -711,11 +713,11 @@ input::placeholder {
 }
 @media (max-width: 767px) {
   .lilblast a {
-    color: #4EACEE;
+    color: #33658A;
   }
 }
 .lilblast a:hover {
-  color: #4EACEE;
+  color: #33658A;
 }
 
 .no-scroll {
@@ -790,7 +792,7 @@ input::placeholder {
   transition: color 0.15s ease;
 }
 .angles button:focus {
-  color: #4EACEE;
+  color: #33658A;
 }
 
 .qwik {
@@ -803,7 +805,7 @@ input::placeholder {
   font-size: 24px;
   background: none;
   text-decoration: none;
-  color: #4EACEE;
+  color: #33658A;
   border: none;
   transition: color 0.15s ease-in-out;
 }
@@ -910,7 +912,7 @@ input::placeholder {
   background: none;
 }
 .nav .spread-menu button:hover {
-  color: #4EACEE;
+  color: #33658A;
 }
 @media (max-width: 767px) {
   .nav .spread-menu {
@@ -931,7 +933,7 @@ input::placeholder {
   transition: color 0.15s ease-in-out;
 }
 .nav .lebuttan a:hover {
-  color: #4EACEE;
+  color: #33658A;
 }
 @media (max-width: 767px) {
   .nav .lebuttan {
@@ -1020,4 +1022,111 @@ input::placeholder {
   overflow: hidden;
   clip: rect(0 0 0 0);
   border: 0;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 80vw;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  animation: zoomIn 0.3s ease-out forwards;
+}
+@media (max-width: 767px) {
+  .lightbox-content {
+    z-index: 2000;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #020202;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: bolder;
+  color: #fff;
+  border-radius: 30px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lightbox-trigger img {
+  width: 100%;
+  border-radius: 24px;
+  filter: blur(8px);
+  cursor: pointer;
+  scale: 1;
+  transition: scale 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7), filter 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7);
+}
+@media (max-width: 767px) {
+  .lightbox-trigger img {
+    filter: blur(0px);
+  }
+}
+@media (768px <= width <= 1024px) {
+  .lightbox-trigger img {
+    filter: blur(0px);
+  }
+}
+.lightbox-trigger img:hover {
+  scale: 1.04;
+  filter: blur(0);
+}
+@media (max-width: 767px) {
+  .lightbox-trigger img:hover {
+    scale: 1;
+  }
+}
+@media (768px <= width <= 1024px) {
+  .lightbox-trigger img:hover {
+    scale: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.tatata h2 {
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */

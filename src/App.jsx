@@ -7,6 +7,7 @@ import AboutSection from "./components/AboutSection";
 import NewsletterSection from "./components/NewsletterSection";
 import Navbar from "./components/navbar/Navbar";
 import MediaAndMentions from "./components/MediaAndMentions";
+import VideoSection from "./components/VideoSection";
 
 function App() {
   const homeRef = useRef(null);
@@ -55,6 +56,7 @@ function App() {
       <div ref={worksRef}>
         <MediaAndMentions />
       </div>
+      <VideoSection />
       <div ref={servicesRef}>
         <AboutSection />
       </div>

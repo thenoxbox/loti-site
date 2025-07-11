@@ -31,7 +31,7 @@ const Jumbotron = () => {
       </video>
       <div className="jmbodisps">
         <p>Latest release</p>
-        <h1>Ahead Ahead</h1>
+        <h1>Okirika .ft Taves</h1>
         <a
           href="https://loti.lnk.to/AheadAhead"
           aria-label="listen to Ahead Ahead now"

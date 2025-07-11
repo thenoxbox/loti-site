@@ -101,6 +101,8 @@ const NewsletterSection = () => {
           <input
             type="checkbox"
             id="newsletter-optin"
+            aria-label="Sign up to Loti's official newsletter to be the first to find out
+            about new music, videos, gigs & competitions."
             required
             ref={checkboxRef} // ✅ Connect ref to checkbox
           />

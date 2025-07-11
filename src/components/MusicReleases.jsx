@@ -39,6 +39,8 @@ import background5 from "../assets/workfive.webp";
 import background6 from "../assets/worksix.webp";
 import background7 from "../assets/workseven.webp";
 import background8 from "../assets/workeight.webp";
+import background9 from "../assets/worknine.webp";
+import background10 from "../assets/workten.webp";
 
 const containerVariants = {
   show: {
@@ -63,10 +65,22 @@ const MusicReleases = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <MusicKards
+          bkg={background9}
+          mtitle={"GG, Vol. 2: Lotstar"}
+          link="https://loti.lnk.to/GorimapaGangstaVolIILotstar"
+          label={"Listen to Gorimapa Gangsta Volume two now"}
+        />
+        <MusicKards
           bkg={background7}
           mtitle={"Ahead Ahead"}
           link="https://loti.lnk.to/AheadAhead"
           label={"Listen to Ahead Ahead now"}
+        />
+        <MusicKards
+          bkg={background10}
+          mtitle={"Move"}
+          link="https://open.spotify.com/track/7oiziqlPGo4hbMr6iAsRTu?si=ec44b0056c77426e"
+          label={"Listen to Move on spotify now"}
         />
         <MusicKards
           bkg={background8}
