@@ -1,0 +1,12 @@
+{
+    "source": "/:path*",
+    "has": [
+      {
+        "type": "host",
+        "value": "www.ggunit.com"
+      }
+    ],
+    "destination": "https://ggunit.com/:path*",
+    "permanent": true
+  }
+  
