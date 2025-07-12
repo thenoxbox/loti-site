@@ -1,12 +1,16 @@
 {
-    "source": "/:path*",
-    "has": [
+    "redirects": [
       {
-        "type": "host",
-        "value": "www.ggunit.com"
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.ggunit.com"
+          }
+        ],
+        "destination": "https://ggunit.com/:path*",
+        "permanent": true
       }
-    ],
-    "destination": "https://ggunit.com/:path*",
-    "permanent": true
+    ]
   }
   
