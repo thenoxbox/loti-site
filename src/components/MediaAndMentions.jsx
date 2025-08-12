@@ -10,7 +10,7 @@ const MediaAndMentions = () => {
     <>
       <div className="manhan">
         <div className="haman">
-          <h1>Media & Mentions</h1>
+          <h1>Press</h1>
         </div>
         <div className="hamanposts">
           <Mnms

@@ -17,7 +17,31 @@ const YoutubeLightbox = ({ videoId, thumbnail }) => {
       {/* Trigger */}
       <div className="lightbox-trigger" onClick={() => setOpen(true)}>
         {thumbnail ? (
-          <img src={thumbnail} alt="Video thumbnail" />
+          // <img src={thumbnail} alt="Video thumbnail" />
+          <div
+            className="ken"
+            style={{
+              backgroundImage: `url(${thumbnail})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="39.01"
+              height="39.01"
+              viewBox="0 0 39.01 39.01"
+            >
+              <defs>
+                <style>{`.a { fill: #fff; }`}</style>
+              </defs>
+              <path
+                className="a"
+                d="M1004,104.5a19.5,19.5,0,1,1,19.5,19.5A19.5,19.5,0,0,1,1004,104.5Zm2.808,0a16.7,16.7,0,1,0,16.7-16.7A16.715,16.715,0,0,0,1006.8,104.5Zm10.675-10.862,16.537,10.863-16.537,10.862Z"
+                transform="translate(-1003.996 -84.994)"
+              />
+            </svg>
+          </div>
         ) : (
           <button>▶ Watch</button>
         )}

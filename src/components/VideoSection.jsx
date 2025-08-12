@@ -22,58 +22,60 @@ const VideoSection = () => {
       <div className="haman">
         <h1>Videos</h1>
       </div>
-      <motion.div
-        className="hamanposts"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {[
-          // map pattern is optional if you want to clean this later
-          {
-            id: "1",
-            videoId: "6wTnlM44h4Q",
-            thumbnail:
-              "https://img.youtube.com/vi/6wTnlM44h4Q/maxresdefault.jpg",
-            title: "Loti - Okirika ft. taves",
-          },
-          {
-            id: "2",
-            videoId: "nIdvxMLs7Jo",
-            thumbnail:
-              "https://img.youtube.com/vi/nIdvxMLs7Jo/maxresdefault.jpg",
-            title: "Loti - Ahead Ahead (Official Video)",
-          },
-          {
-            id: "3",
-            videoId: "CtFo44gvisQ",
-            thumbnail: "https://img.youtube.com/vi/CtFo44gvisQ/hqdefault.jpg",
-            title: "Loti - Move ft. Moliy",
-          },
-          {
-            id: "4",
-            videoId: "b1-uNy3ZLc0",
-            thumbnail: "https://img.youtube.com/vi/b1-uNy3ZLc0/hqdefault.jpg",
-            title: "Loti - Mainland (Official Video)",
-          },
-        ].map((video) => (
-          <motion.div
-            key={video.id}
-            className="bigmanblast"
-            variants={itemVariants}
-          >
-            <YoutubeLightbox
-              id={video.id}
-              videoId={video.videoId}
-              thumbnail={video.thumbnail}
-            />
-            <div className="lilblast tatata">
-              <h2>{video.title}</h2>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="chunsun">
+        <motion.div
+          className="bonton"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {[
+            // map pattern is optional if you want to clean this later
+            {
+              id: "1",
+              videoId: "6wTnlM44h4Q",
+              thumbnail:
+                "https://img.youtube.com/vi/6wTnlM44h4Q/maxresdefault.jpg",
+              title: "Loti - Okirika ft. taves",
+            },
+            {
+              id: "2",
+              videoId: "nIdvxMLs7Jo",
+              thumbnail:
+                "https://img.youtube.com/vi/nIdvxMLs7Jo/maxresdefault.jpg",
+              title: "Loti - Ahead Ahead (Official Video)",
+            },
+            {
+              id: "3",
+              videoId: "CtFo44gvisQ",
+              thumbnail: "https://img.youtube.com/vi/CtFo44gvisQ/hqdefault.jpg",
+              title: "Loti - Move ft. Moliy",
+            },
+            {
+              id: "4",
+              videoId: "b1-uNy3ZLc0",
+              thumbnail: "https://img.youtube.com/vi/b1-uNy3ZLc0/hqdefault.jpg",
+              title: "Loti - Mainland (Official Video)",
+            },
+          ].map((video) => (
+            <motion.div
+              key={video.id}
+              className="bonthou"
+              variants={itemVariants}
+            >
+              <YoutubeLightbox
+                id={video.id}
+                videoId={video.videoId}
+                thumbnail={video.thumbnail}
+              />
+              <div className="lilblast tatata">
+                <h2>{video.title}</h2>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

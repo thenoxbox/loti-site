@@ -35,8 +35,8 @@ const NewsletterSection = () => {
       .then(() => {
         setLoading(false);
         setSubmitted(true);
-        setEmail(""); // ✅ Reset email
-        if (checkboxRef.current) checkboxRef.current.checked = false; // ✅ Reset checkbox
+        setEmail(""); // Resets the email
+        if (checkboxRef.current) checkboxRef.current.checked = false; // Resets the checkbox
         setTimeout(() => setSubmitted(false), 3000);
       })
       .catch((err) => {
@@ -46,77 +46,79 @@ const NewsletterSection = () => {
   };
 
   return (
-    <div className="newsec">
-      <div className="headnlinks">
-        <h1>Subscribe for updates</h1>
-        <div className="winkers">
-          <a href="https://www.instagram.com/lotst4r/" aria-label="Instagram">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="https://x.com/LotStar" aria-label="Twitter">
-            <FontAwesomeIcon icon={faXTwitter} />
-          </a>
-          <a
-            href="https://open.spotify.com/artist/68vnTeEFYHwyYIviDda37B?si=PbW5rN__QMy5Ss8AqTOQ4A"
-            aria-label="Spotify"
-          >
-            <FontAwesomeIcon icon={faSpotify} />
-          </a>
-          <a
-            href="https://music.apple.com/ng/artist/loti/1362893117"
-            aria-label="Apple"
-          >
-            <FontAwesomeIcon icon={faApple} />
-          </a>
-          <a href="https://www.youtube.com/@rnbloti" aria-label="YouTube">
-            <FontAwesomeIcon icon={faYoutube} />
-          </a>
-        </div>
-      </div>
-
-      <form className="forms" onSubmit={sendEmail}>
-        <div className="subsend">
-          <input
-            id="newsletter-email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="EMAIL ADDRESS"
-            aria-label="Email address"
-            autoComplete="email"
-          />
-          <button
-            type="submit"
-            disabled={loading}
-            aria-label="Submit email"
-            name="submit"
-          >
-            <FontAwesomeIcon icon={faArrowRight} />
-          </button>
+    <div className="jah">
+      <div className="newsec">
+        <div className="headnlinks">
+          <h1>Subscribe for updates</h1>
+          <div className="winkers">
+            <a href="https://www.instagram.com/lotst4r/" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://x.com/LotStar" aria-label="Twitter">
+              <FontAwesomeIcon icon={faXTwitter} />
+            </a>
+            <a
+              href="https://open.spotify.com/artist/68vnTeEFYHwyYIviDda37B?si=PbW5rN__QMy5Ss8AqTOQ4A"
+              aria-label="Spotify"
+            >
+              <FontAwesomeIcon icon={faSpotify} />
+            </a>
+            <a
+              href="https://music.apple.com/ng/artist/loti/1362893117"
+              aria-label="Apple"
+            >
+              <FontAwesomeIcon icon={faApple} />
+            </a>
+            <a href="https://www.youtube.com/@rnbloti" aria-label="YouTube">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+          </div>
         </div>
 
-        <div className="safety">
-          <input
-            type="checkbox"
-            id="newsletter-optin"
-            aria-label="Sign up to Loti's official newsletter to be the first to find out
+        <form className="forms" onSubmit={sendEmail}>
+          <div className="subsend">
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="EMAIL ADDRESS"
+              aria-label="Email address"
+              autoComplete="email"
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              aria-label="Submit email"
+              name="submit"
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+
+          <div className="safety">
+            <input
+              type="checkbox"
+              id="newsletter-optin"
+              aria-label="Sign up to Loti's official newsletter to be the first to find out
             about new music, videos, gigs & competitions."
-            required
-            ref={checkboxRef} // ✅ Connect ref to checkbox
-          />
-          <p>
-            Sign up to Loti's official newsletter to be the first to find out
-            about new music, videos, gigs & competitions.
-          </p>
-        </div>
+              required
+              ref={checkboxRef} // Connects ref to checkbox
+            />
+            <p>
+              Sign up to Loti's official newsletter to be the first to find out
+              about new music, videos, gigs & competitions.
+            </p>
+          </div>
 
-        <div className="submission-feedback">
-          {loading && <Mirage size="120" speed="2.5" color="#4EACEE" />}
-          {submitted && <p className="success-msg">Subscribed!</p>}
-        </div>
-      </form>
+          <div className="submission-feedback">
+            {loading && <Mirage size="120" speed="2.5" color="#4EACEE" />}
+            {submitted && <p className="success-msg">Subscribed!</p>}
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

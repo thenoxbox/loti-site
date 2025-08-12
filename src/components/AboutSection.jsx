@@ -4,12 +4,18 @@ import AboutKardsL from "./cards/AboutKardsL";
 import background1 from "../assets/aboutfirst.webp";
 import background2 from "../assets/aboutmid.webp";
 import background3 from "../assets/aboutlast.webp";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHouse } from "@fortawesome/free-solid-svg-icons";
+// import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
     <div className="abtparent">
       <div className="abtwittle">
         <h1>About</h1>
+        {/* <Link to="/">
+          <FontAwesomeIcon icon={faHouse} />
+        </Link> */}
       </div>
       <div className="abtkontent">
         <AboutKardsL

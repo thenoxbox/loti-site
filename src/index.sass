@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap')
-
 $mobile: 767px
 $tablet: 481px
 $laptops: 1380px
 $wabbleone: 768px
 $wabbletwo: 1024px
-
+$big-skween: 1381px
 //Colors used in the website
 
 $primary: #020202
@@ -38,6 +37,10 @@ $secondary: #33658A
     @media(width: 540px)
         @content
 
+@mixin bigSkween
+    @media(min-width: $big-skween)
+        @content
+
 *
     margin: 0
     box-sizing: border-box
@@ -60,6 +63,13 @@ body
 /* You can't completely hide the scrollbar in Firefox with pure CSS, */
 /* but you can make it very thin and less obtrusive. */
 /* See the next example for a better approach for Firefox. */
+
+@font-face
+    font-family: 'Overused Grotesk'
+    src: url('./assets/fonts/OverusedGroteskRoman-VF.ttf') format('truetype')
+    font-weight: 100 900
+    font-style: normal
+    font-display: swap
 
 .jmbotron
     @include flex-hori
@@ -87,7 +97,7 @@ body
         // gap: 4px
         gap: 10px
     p
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 25px
@@ -99,7 +109,7 @@ body
             font-size: 20px
             text-align: center
     h1
-        // font-family: 'Plus Jakarta Sans'
+        // font-family: 'Overused Grotesk', sans-serif
         font-family: "Bodoni Moda", serif
         font-style: italic
         font-weight: 600
@@ -113,47 +123,55 @@ body
             font-size: 44px
             text-align: center
         @include wablets
-            font-size: 92px
+            // font-size: 92px
+            font-size: 70px
     a
         background: #02020200
-        border: 4px solid $secondary
+        border: 2px solid #fff
         text-decoration: none
-        border-radius: 40px
-        font-family: 'Plus Jakarta Sans'
+        // border-radius: 40px
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 700
         font-size: 14px
         letter-spacing: -0.03em
-        color: $secondary
+        color: #ffff
         padding: 12px 18px
         box-shadow: 0px 0px 0px 0px
-        transform: translateY(0)
-        transition: color 0.15s ease-in-out,box-shadow .3s cubic-bezier(.5,2.5,.7,.7), transform .3s cubic-bezier(.5,2.5,.7,.7),border .15s ease
+        // transform: translateY(0)
+        // transition: color 0.15s ease-in-out,box-shadow .3s cubic-bezier(.5,2.5,.7,.7), transform .3s cubic-bezier(.5,2.5,.7,.7),border .15s ease, background .3s cubic-bezier(.5,2.5,.7,.7)
+        transition: all .3s cubic-bezier(.5,2.5,.7,.7)
+
         @include mobile
             color: #ffff
-            border: 4px solid #ffff
+            border: 2px solid #ffff
             font-size: 16px
         &:hover
-            color: #ffffff
-            box-shadow: 2px 4px 0px #ffffff
-            border: 4px solid #ffffff
-            transform: translateY(-1px)
-                // font-weight: 600
+            // color: #ffff
+            // background: $secondary
+            // box-shadow: 2px 4px 0px #fff
+            // border: 2px solid $secondary
+            // transform: translateY(-1px)
+            //     // font-weight: 600
+            background: white
+            color: black
         @include wablets
             color: #ffff
-            border: 4px solid #ffff
+            border: 2px solid #ffff
 
 .mrtitle
     h1
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 50px
         letter-spacing: -0.01em
+        margin-left: 24px
         color: #FFFFFF
         @include mobile
             font-size: 30px
-            padding-top: 140px
+            // padding-top: 140px
+            padding-top: 160px
         @include wablets
             font-size: 35px
 .maxmusic
@@ -191,7 +209,7 @@ body
     @include flex-hori
     justify-content: space-between
     h2
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 27px
@@ -210,7 +228,7 @@ body
         border-radius: 20px
         padding: 8px 20px
         font-size: 16px
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 700
         font-size: 15px
@@ -232,15 +250,20 @@ body
 .abtparent
     @include flex-ver
     gap: 44px
-    margin: 114px 28px
+    // margin: 114px 28px
+    margin: 0px 28px
+
     @include mobile
-        margin: 90px 28px
+        // margin: 90px 28px
+        margin: 0px 28px
+
 .abtwittle
     @include flex-hori
+    justify-content: space-between
     // justify-content: flex-end
     // margin-right: 40px
     h1
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 50px
@@ -252,31 +275,89 @@ body
             font-size: 30px
         @include wablets
             font-size: 35px
+    a
+        font-family: 'Overused Grotesk', sans-serif
+        font-style: normal
+        font-weight: 800
+        font-size: 30px
+        text-decoration: none
+        // line-height: 76px
+        text-align: right
+        letter-spacing: -0.02em
+        color: #FFFFFF
+        transition: color .15s ease-in-out
+        &:hover
+            color: $secondary
+        @include mobile
+            font-size: 30px
+        @include wablets
+            font-size: 35px
+.home-icon
+    width: 30px
+    text-align: center
+    height: 30px
+    fill: #fff
+
+.loke
+    @include flex-hori
+    justify-content: center
+    align-items: center
+    // margin-top: 50px
+    margin: 20px
+    a
+        display: inline-block
+        padding: 0.75rem 1.5rem
+        border: 2px solid white
+        // font-family: 'Overused Grotesk', sans-serif
+        font-family: 'Overused Grotesk', sans-serif
+        font-size: 20px
+        background: transparent
+        color: white
+        font-weight: bold
+        text-decoration: none
+        cursor: pointer
+        transition: all 0.25s ease
+
+        &:hover
+            background: white
+            color: black
+.tems
+    @include flex-ver
+    gap: 60px
+    justify-content: space-between
 .abtkontent
     @include flex-ver
     gap: 140px
     @include mobile
         gap: 40px
 .abtsplashtwo
-    @include flex-hori
-    justify-content: space-between
-    gap: 10px
+    display: grid
+    // grid-template-columns: repeat(2,1fr)
+    grid-template-columns: 40% 58%
+    // height: 350px
+    gap: 20px
     @include mobile
         @include flex-ver
+        height: auto
         gap: 50px
 
 .abtsplash
-    @include flex-hori
-    justify-content: space-between
-    flex-direction: row-reverse
-    gap: 10px
+    display: grid
+    // grid-template-columns: repeat(2,1fr)
+    grid-template-columns: 40% 58%
+    // height: 350px
+    // flex-direction: row-reverse
+    direction: rtl
+    gap: 20px
     @include mobile
         @include flex-ver
+        direction: ltr
+        height: auto
         gap: 50px
 
 .wimage
     height: 394px
-    width: 40%
+    // width: 40%
     border: 2px solid $secondary
     @include mobile
         width: auto
@@ -284,13 +365,13 @@ body
     @include wablets
         height: 268px
 .abkontent-l
-    width: 54%
+    // width: 54%
     @include mobile
         width: auto
     p
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
-        font-weight: 300
+        font-weight: 500
         font-size: 24px
         line-height: 150%
         text-align: right
@@ -303,13 +384,13 @@ body
         @include wablets
             font-size: 18px
 .abkontent-r
-    width: 54%
+    // width: 54%
     @include mobile
         width: auto
     p
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
-        font-weight: 300
+        font-weight: 500
         font-size: 24px
         line-height: 150%
         text-align: left
@@ -320,7 +401,11 @@ body
             letter-spacing: -0.03em
         @include wablets
             font-size: 18px
-
+.jah
+    @include bigSkween
+        display: flex
+        justify-content: center
+        align-items: center
 .newsec
     @include flex-hori
     margin: 20px 28px
@@ -329,6 +414,8 @@ body
         @include flex-ver
         gap: 38px
         margin: 35px 28px
+    @include bigSkween
+        width: 86%
 
 .headnlinks
     width: 40%
@@ -338,7 +425,7 @@ body
         width: auto
         gap: 20px
     h1
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 55px
@@ -349,6 +436,8 @@ body
             font-size: 40px
         @include wablets
             font-size: 40px
+        @include bigSkween
+            font-size: 58px
 .winkers
     width: 48.7%
     @include flex-hori
@@ -363,7 +452,7 @@ body
         border: none
         transition: color 0.15s ease-in-out
         @include mobile
-            color: $secondary
+            // color: $secondary
         &:hover
             color: $secondary
     // button
@@ -389,7 +478,8 @@ input::placeholder
     gap: 10px
     justify-content: space-between
     p
-        font-family: 'Plus Jakarta Sans'
+        // font-family: 'Overused Grotesk', sans-serif
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 500
         font-size: 18px
@@ -417,7 +507,7 @@ input::placeholder
         background: $primary
         border: 2px solid #ffffff
         padding: 0 22px
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 600
         font-size: 20px
@@ -442,7 +532,7 @@ input::placeholder
     @include flex-hori
     justify-content: center
     p
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 18px
@@ -458,7 +548,7 @@ input::placeholder
     padding-bottom: 30px
 .haman
     h1
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 800
         font-size: 50px
@@ -486,11 +576,20 @@ input::placeholder
 .blastoise
     height: 380px
     border-radius: 10px
+    overflow: hidden
+    @include bigSkween
+        height: 440px
+    img
+        //some experimental stuff that i am trying out.
+        height: 100%
+        width: 100%
+        object-fit: cover
+        display: block
 .lilblast
     @include flex-ver
     gap: 15px
     h2
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: italic
         font-weight: 800
         font-size: 24px
@@ -502,7 +601,7 @@ input::placeholder
         @include wablets
             font-size: 20px
     p
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 200
         font-size: 18px
@@ -514,7 +613,7 @@ input::placeholder
         @include wablets
             font-size: 14px
     a
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-style: normal
         font-weight: 600
         font-size: 18px
@@ -580,7 +679,7 @@ input::placeholder
     padding: 80px 64px 0px 64px
     gap: 60px
     button
-        font-family: 'Plus Jakarta Sans'
+        font-family: 'Overused Grotesk', sans-serif
         font-size: 30px
         font-weight: 700
         color: #fff
@@ -607,23 +706,32 @@ input::placeholder
 .nav
     // width: 100%
     display: flex
-    font-family: 'Plus Jakarta Sans'
+    font-family: 'Overused Grotesk', sans-serif
     justify-content: space-between
     // margin: 20px 27px 0px 27px
     position: sticky
     top: 0px
     right: 0px
     // background: #1e1e1e
-    padding: 12px 18px
-    -webkit-backdrop-filter: blur(8px)
-    backdrop-filter: blur(8px)
+    // padding: 12px 18px
+    // -webkit-backdrop-filter: blur(8px)
+    // backdrop-filter: blur(8px)
+    background: $primary
+    padding: 10px
     @include mobile
         backdrop-filter: none
         padding: 25px 18px
+        align-items: stretch
+        flex-direction: column-reverse
     // // border-radius: 27px
     z-index: 120
     a
         text-decoration: none
+        font-family: 'Overused Grotesk', sans-serif
+        font-weight: 600
+        @include mobile
+            text-align: center
+            font-size: 30px
     .stacked
         display: none
         z-index: 999
@@ -678,8 +786,16 @@ input::placeholder
     .splat
         @include flex-ver
         gap: 16px
-        justify-content: end
-
+        // justify-content: end
+        padding-top: 10px
+        @include mobile
+            // display: none
+    .yah
+        @include mobile
+            text-transform: none !important
+            font-size: 16px !important
+            a
+                font-size: 16px !important
     .spread-menu
         display: flex
         justify-content: space-evenly
@@ -687,12 +803,29 @@ input::placeholder
         // margin-right: 20px
         button
             border: none
-            font-family: 'Plus Jakarta Sans'
+            // font-family: 'Overused Grotesk', sans-serif
+            font-family: 'Overused Grotesk', sans-serif
             font-style: normal
             font-weight: 700
-            font-size: 18px
-            line-height: 30px
-            letter-spacing: -0.01em
+            // font-size: 18px
+            font-size: 14px
+            line-height: 20px
+            letter-spacing: -0.03em
+            text-align: right
+            color: #ffffff
+            transition: color 0.15s ease-in-out
+            background: none
+            &:hover
+                color: $secondary
+        a
+            // font-family: 'Overused Grotesk', sans-serif
+            font-family: 'Overused Grotesk', sans-serif
+            font-style: normal
+            font-weight: 700
+            // font-size: 18px
+            line-height: 20px
+            letter-spacing: -0.03em
+            text-decoration: none
             text-align: right
             color: #ffffff
             transition: color 0.15s ease-in-out
@@ -701,13 +834,20 @@ input::placeholder
                 color: $secondary
     @include mobile
         .spread-menu
-            display: none
+            button
+                text-transform: uppercase
+                font-size: 12px
+            a
+                // text-transform: uppercase
+                font-size: 12px
+
     .lebuttan
         @include flex-hori
-        // width: 75%
+        width: 300px
         justify-content: space-between
         a
-            font-size: 22.5px
+            font-size: 16.5px
+            // font-size: 22.5px
             background: none
             text-decoration: none
             color: #ffffff
@@ -717,25 +857,25 @@ input::placeholder
                 color: $secondary
         @include mobile
             display: none
-    h2
-        font-family: "Dancing Script", cursive
-        font-style: normal
-        font-weight: 800
-        font-size: 60px
-        line-height: 55px
-        letter-spacing: -0.025em
-        color: #ffffff
-        text-shadow: none
-        transition: text-shadow .35s ease-in-out,
-        &:hover
-            cursor: default
-        @include mobile
-            padding-top: 5.5px
-            display: block
-            z-index: 99
-    &:hover
-        h2
-            text-shadow: #ffffff 4px 4px 10px
+    // h2
+    //     font-family: "Dancing Script", cursive
+    //     font-style: normal
+    //     font-weight: 800
+    //     font-size: 60px
+    //     line-height: 55px
+    //     letter-spacing: -0.025em
+    //     color: #ffffff
+    //     text-shadow: none
+    //     transition: text-shadow .35s ease-in-out,
+    //     &:hover
+    //         cursor: default
+    //     @include mobile
+    //         padding-top: 5.5px
+    //         display: block
+    //         z-index: 99
+    // &:hover
+    //     h2
+    //         text-shadow: #ffffff 4px 4px 10px
 
 // for the footer section
 
@@ -894,6 +1034,11 @@ iframe
             scale: 1
         @include wablets
             scale: 1
+.ken
+    height: 300px
+    display: flex
+    justify-content: center
+    align-items: center
 
 // 🔥 Animations
 @keyframes fadeIn
@@ -912,4 +1057,126 @@ iframe
 
 .tatata
     h2
-        text-align: center
+        text-align: left
+        font-weight: 600
+        font-style: normal
+        font-family: 'Overused Grotesk', sans-serif
+        font-size: 20px
+
+//the minimalist slide 
+
+.music-carousel
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    // background: #000
+    padding: 2rem
+    min-height: 500px
+    @include mobile
+        min-height: 60vh
+
+    &__viewport
+        position: relative
+        width: 100%
+        max-width: 400px
+        overflow: hidden
+
+    &__slide
+        // position: absolute
+        width: 100%
+        height: 100%
+
+    &__arrow
+        font-size: 3rem
+        color: white
+        background: none
+        border: none
+        cursor: pointer
+        z-index: 2
+
+        &.left
+            position: absolute
+            left: 0
+            @include mobile
+                visibility: hidden
+
+        &.right
+            position: absolute
+            right: 0
+            @include mobile
+                visibility: hidden
+
+.music-slide
+    text-align: center
+    color: #fff
+
+    &__title
+        font-size: 1.5rem
+        margin-bottom: 1rem
+        font-family: 'Overused Grotesk', sans-serif
+
+    &__image
+        width: 100%
+        height: 400px
+        object-fit: cover
+        border-radius: 4px
+        margin-bottom: 1rem
+        @include mobile
+            object-fit: fill
+            // height: 340px
+            height: 100%
+    &__button
+        display: inline-block
+        padding: 0.75rem 1.5rem
+        border: 2px solid white
+        // font-family: 'Overused Grotesk', sans-serif
+        font-family: 'Overused Grotesk', sans-serif
+        // font-size: 20px
+        font-size: 18px
+        background: transparent
+        color: white
+        font-weight: bold
+        text-decoration: none
+        cursor: pointer
+        transition: all 0.25s ease
+
+        &:hover
+            background: white
+            color: black
+.buns
+    @include flex-hori
+    justify-content: center
+    width: 100%
+.chunsun
+    @include flex-hori
+    justify-content: center
+    // padding: 190px
+    @include mobile
+        display: contents
+        justify-content: none
+        padding: none
+.bonton
+    width: 63.542vw
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3.125vw
+    padding-bottom: 6.524vw
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 40px
+    @include mobile
+        width: 80vw
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        gap: 5.333vw
+        padding-bottom: 13.333vw
+    @include wablets
+        width: 80.542vw
+.bonthou
+    display: flex
+    flex-direction: column
+    gap: 20px
+    margin: 20px 0px

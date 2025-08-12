@@ -2,12 +2,13 @@ import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import Jumbotron from "./components/Jumbotron";
 import background1 from "../src/assets/jambabk.webp";
-import MusicReleases from "./components/MusicReleases";
+// import MusicReleases from "./components/MusicReleases";
 import AboutSection from "./components/AboutSection";
 import NewsletterSection from "./components/NewsletterSection";
 import Navbar from "./components/navbar/Navbar";
 import MediaAndMentions from "./components/MediaAndMentions";
 import VideoSection from "./components/VideoSection";
+import MusicCarousel from "./components/MusicCarousel";
 
 function App() {
   const homeRef = useRef(null);
@@ -51,15 +52,16 @@ function App() {
       />
       <Jumbotron bkg={background1} />
       <div ref={homeRef}>
-        <MusicReleases />
+        {/* <MusicReleases /> */}
+        <MusicCarousel />
       </div>
       <div ref={worksRef}>
         <MediaAndMentions />
       </div>
-      <VideoSection />
       <div ref={servicesRef}>
-        <AboutSection />
+        <VideoSection />
       </div>
+      {/* <AboutSection /> */}
       <NewsletterSection />
       <div className="footsies">
         <a
