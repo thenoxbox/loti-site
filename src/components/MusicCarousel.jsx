@@ -13,8 +13,15 @@ import background7 from "../assets/workseven.webp";
 import background8 from "../assets/workeight.webp";
 import background9 from "../assets/worknine.webp";
 import background10 from "../assets/workten.webp";
+import background11 from "../assets/workeleven.webp";
 
 const slides = [
+  {
+    title: "NWABALI 2.0 (feat. Jeriq)",
+    image: background11,
+    link: "https://open.spotify.com/track/5orP2FcrsdmvktU46hvV9z?si=332c6f1b1d60483c",
+    label: "Listen to Nwabali 2.0 now",
+  },
   {
     title: "GG, Vol. 2: Lotstar",
     image: background9,
