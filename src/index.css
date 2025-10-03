@@ -343,6 +343,60 @@ body {
   fill: #fff;
 }
 
+.blokes {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin: 0px 28px;
+  justify-content: center;
+}
+.blokes h2 {
+  font-family: "Overused Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+  font-size: 25px;
+}
+@media (max-width: 767px) {
+  .blokes h2 {
+    font-size: 18px;
+  }
+}
+
+.kese {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .kese {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+.kese a {
+  font-family: "Overused Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 8px;
+  border: 2px solid white;
+  border-radius: 2rem;
+  font-size: 18px;
+  transition: all 0.25s ease;
+}
+@media (max-width: 767px) {
+  .kese a {
+    font-size: 18px;
+  }
+}
+.kese a:hover {
+  background: #fff;
+  color: black;
+}
+
 .loke {
   display: flex;
   flex-direction: row;
@@ -362,6 +416,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s ease;
+  border-radius: 2rem;
 }
 .loke a:hover {
   background: white;
